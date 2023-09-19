@@ -1,16 +1,19 @@
+//
 // The basic two column layout
+//
 
 .side-bar {
-  z-index: 0;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   background-color: $sidebar-color;
 
   @include mq(md) {
-    flex-flow: column nowrap;
+    flex-wrap: nowrap;
     position: fixed;
     width: $nav-width-md;
     height: 100%;
+    flex-direction: column;
     border-right: $border $border-color;
     align-items: flex-end;
   }
@@ -37,7 +40,6 @@
 
 .main-content-wrap {
   @include container;
-
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
 
@@ -51,10 +53,12 @@
   z-index: 0;
   display: none;
   background-color: $sidebar-color;
+  align-items: center;
 
   @include mq(md) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: $header-height;
     background-color: $body-background-color;
     border-bottom: $border $border-color;
@@ -109,7 +113,6 @@
 
 .site-title {
   @include container;
-
   flex-grow: 1;
   display: flex;
   height: 100%;
@@ -129,6 +132,7 @@
   .site-logo {
     width: 100%;
     height: 100%;
+    max-width: 164px;
     background-image: url($logo);
     background-repeat: no-repeat;
     background-position: left center;
@@ -141,6 +145,9 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
+  color: $white;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 @include mq(md) {
@@ -183,7 +190,6 @@ body {
 
 .site-footer {
   @include container;
-
   position: absolute;
   bottom: 0;
   left: 0;

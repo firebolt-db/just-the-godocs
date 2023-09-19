@@ -39,7 +39,6 @@ layout: default
 title: Customization
 nav_order: 4
 ---
-
 ```
 
 The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
@@ -64,7 +63,6 @@ layout: default
 title: 404
 nav_exclude: true
 ---
-
 ```
 
 The `nav_exclude` parameter does not affect the [auto-generating list of child pages](#auto-generating-table-of-contents), which you can use to access pages excluded from the main navigation.
@@ -118,13 +116,11 @@ title: UI Components
 nav_order: 2
 has_children: true
 ---
-
 ```
 
 Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
 
 ### Child pages
-
 {: .text-gamma }
 
 On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
@@ -139,7 +135,6 @@ title: Buttons
 parent: UI Components
 nav_order: 2
 ---
-
 ```
 
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
@@ -202,7 +197,6 @@ parent: UI Components
 nav_order: 2
 has_children: true
 ---
-
 ```
 
 ```yaml
@@ -213,7 +207,6 @@ parent: Buttons
 grand_parent: UI Components
 nav_order: 1
 ---
-
 ```
 
 This would create the following navigation structure:

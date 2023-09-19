@@ -155,7 +155,6 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
-
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>

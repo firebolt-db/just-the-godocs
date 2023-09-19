@@ -28,7 +28,6 @@ To enable a color scheme, set the `color_scheme` parameter in your site's `_conf
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
-
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -85,7 +84,6 @@ Please use scheme files.
 ### Use a custom scheme
 
 To use the custom color scheme, only set the `color_scheme` parameter in your site's `_config.yml` file:
-
 ```yaml
 color_scheme: foo
 ```

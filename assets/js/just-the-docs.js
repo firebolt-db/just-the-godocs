@@ -69,12 +69,20 @@ function initNav() {
 
 function initSearch() {
   var request = new XMLHttpRequest();
+<<<<<<< HEAD
   request.open('GET', '{{ "assets/js/search-data.json" | relative_url }}', true);
+=======
+  request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
+>>>>>>> 0c48f0e6 (dupe with footer chnage)
 
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
       var docs = JSON.parse(request.responseText);
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 0c48f0e6 (dupe with footer chnage)
       lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
 
       var index = lunr(function(){
@@ -87,7 +95,10 @@ function initSearch() {
         this.metadataWhitelist = ['position']
 
         for (var i in docs) {
+<<<<<<< HEAD
           {% include lunr/custom-index.js %}
+=======
+>>>>>>> 0c48f0e6 (dupe with footer chnage)
           this.add({
             id: i,
             title: docs[i].title,
@@ -218,7 +229,10 @@ function searchLoaded(index, docs) {
       resultTitle.classList.add('search-result-title');
       resultLink.appendChild(resultTitle);
 
+<<<<<<< HEAD
       // note: the SVG svg-doc is only loaded as a Jekyll include if site.search_enabled is true; see _includes/icons/icons.html
+=======
+>>>>>>> 0c48f0e6 (dupe with footer chnage)
       var resultDoc = document.createElement('div');
       resultDoc.classList.add('search-result-doc');
       resultDoc.innerHTML = '<svg viewBox="0 0 24 24" class="search-result-icon"><use xlink:href="#svg-doc"></use></svg>';
@@ -456,6 +470,7 @@ jtd.getTheme = function() {
 
 jtd.setTheme = function(theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
+<<<<<<< HEAD
   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
 }
 
@@ -469,6 +484,9 @@ function scrollNav() {
     const rect = targetLink.getBoundingClientRect();
     siteNav.scrollBy(0, rect.top - 3*rect.height);
   }
+=======
+  cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | absolute_url }}' + theme + '.css');
+>>>>>>> 0c48f0e6 (dupe with footer chnage)
 }
 
 // Document ready
@@ -478,6 +496,7 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
+<<<<<<< HEAD
   scrollNav();
 });
 
@@ -523,6 +542,10 @@ jtd.onReady(function(){
 
 {%- endif %}
 
+=======
+});
+
+>>>>>>> 0c48f0e6 (dupe with footer chnage)
 })(window.jtd = window.jtd || {});
 
 {% include js/custom.js %}
