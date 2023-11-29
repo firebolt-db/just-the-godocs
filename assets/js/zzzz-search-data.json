@@ -3,11 +3,7 @@ permalink: /assets/js/search-data.json
 ---
 {
 {%- assign i = 0 -%}
-<<<<<<< HEAD
 {%- assign pages_array = "" | split: "" -%}
-=======
-{%- assign pages_array = '' | split: '' -%}
->>>>>>> 0c48f0e6 (dupe with footer chnage)
 {%- assign pages_array = pages_array | push: site.html_pages -%}
 {%- if site.just_the_docs.collections -%}
   {%- for collection_entry in site.just_the_docs.collections -%}
@@ -54,12 +50,8 @@ permalink: /assets/js/search-data.json
     "doc": {{ page.title | jsonify }},
     "title": {{ title | jsonify }},
     "content": {{ content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
-<<<<<<< HEAD
     "url": "{{ url | relative_url }}",
     {% include lunr/custom-data.json page=page %}
-=======
-    "url": "{{ url | absolute_url }}",
->>>>>>> 0c48f0e6 (dupe with footer chnage)
     "relUrl": "{{ url }}"
   }
         {%- assign i = i | plus: 1 -%}
@@ -70,12 +62,8 @@ permalink: /assets/js/search-data.json
     "doc": {{ page.title | jsonify }},
     "title": {{ page.title | jsonify }},
     "content": {{ parts[0] | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
-<<<<<<< HEAD
     "url": "{{ page.url | relative_url }}",
     {% include lunr/custom-data.json page=page %}
-=======
-    "url": "{{ page.url | absolute_url }}",
->>>>>>> 0c48f0e6 (dupe with footer chnage)
     "relUrl": "{{ page.url }}"
   }
         {%- assign i = i | plus: 1 -%}
