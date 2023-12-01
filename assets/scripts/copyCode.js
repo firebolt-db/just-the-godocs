@@ -5,7 +5,7 @@ codeBlocks.forEach(function (codeBlock) {
   copyButton.className = 'copy';
   copyButton.type = 'button';
   copyButton.ariaLabel = 'Copy code to clipboard';
-  copyButton.innerHTML = '<img src="../../assets/images/copy_icon.svg" />';
+  copyButton.innerHTML = '<img src="/docs/assets/images/copy_icon.svg" />';
 
   codeBlock.append(copyButton);
 
