@@ -12,6 +12,7 @@
 
 html {
   @include fs-4;
+
   scroll-behavior: smooth;
 }
 
@@ -70,7 +71,6 @@ h5 {
 
 h6 {
   margin-top: 2em;
-  // margin-bottom: 1em;
   font-weight: 500;
   line-height: $body-heading-line-height;
   color: $black;
