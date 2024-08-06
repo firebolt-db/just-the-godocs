@@ -23,7 +23,7 @@
       padding-top: $sp-1;
       padding-bottom: $sp-1;
       line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
-      color: #806F6F;
+      color: #806f6f;
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
         padding-left: $gutter-spacing-sm;
@@ -71,13 +71,13 @@
       @if $nav-list-expander-right {
         right: 0;
       }
-      
+
       width: $nav-list-item-height-sm;
       height: $nav-list-item-height-sm;
       padding: #{$nav-list-item-height-sm / 4};
 
       // changing below from $link-color
-      color: #312F30;
+      color: #312f30;
 
       @include mq(md) {
         width: $nav-list-item-height;
@@ -139,7 +139,7 @@
   font-weight: 600;
 
   // adding color below
-  color: #4D3D3E;
+  color: #4d3d3e;
   text-align: end;
   text-transform: uppercase;
   border-bottom: $border $border-color;
